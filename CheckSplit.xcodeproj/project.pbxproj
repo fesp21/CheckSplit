@@ -14,6 +14,10 @@
 		172E27CF1E0C200D00BAFD5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 172E27CD1E0C200D00BAFD5E /* LaunchScreen.storyboard */; };
 		172E27DA1E0C200D00BAFD5E /* CheckSplitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172E27D91E0C200D00BAFD5E /* CheckSplitTests.swift */; };
 		172E27E51E0C200D00BAFD5E /* CheckSplitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172E27E41E0C200D00BAFD5E /* CheckSplitUITests.swift */; };
+		172E27F51E0C206B00BAFD5E /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172E27F41E0C206B00BAFD5E /* Person.swift */; };
+		172E27F91E0C20AA00BAFD5E /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172E27F81E0C20AA00BAFD5E /* Food.swift */; };
+		172E27FB1E0C20CE00BAFD5E /* Appetizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172E27FA1E0C20CE00BAFD5E /* Appetizer.swift */; };
+		172E27FD1E0C21F900BAFD5E /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172E27FC1E0C21F900BAFD5E /* Drink.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		172E27E01E0C200D00BAFD5E /* CheckSplitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CheckSplitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		172E27E41E0C200D00BAFD5E /* CheckSplitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckSplitUITests.swift; sourceTree = "<group>"; };
 		172E27E61E0C200D00BAFD5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		172E27F41E0C206B00BAFD5E /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		172E27F81E0C20AA00BAFD5E /* Food.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		172E27FA1E0C20CE00BAFD5E /* Appetizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Appetizer.swift; sourceTree = "<group>"; };
+		172E27FC1E0C21F900BAFD5E /* Drink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +105,10 @@
 		172E27C31E0C200D00BAFD5E /* CheckSplit */ = {
 			isa = PBXGroup;
 			children = (
+				172E27F81E0C20AA00BAFD5E /* Food.swift */,
+				172E27FA1E0C20CE00BAFD5E /* Appetizer.swift */,
+				172E27FC1E0C21F900BAFD5E /* Drink.swift */,
+				172E27F41E0C206B00BAFD5E /* Person.swift */,
 				172E27C41E0C200D00BAFD5E /* AppDelegate.swift */,
 				172E27C61E0C200D00BAFD5E /* ViewController.swift */,
 				172E27C81E0C200D00BAFD5E /* Main.storyboard */,
@@ -262,7 +274,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				172E27FB1E0C20CE00BAFD5E /* Appetizer.swift in Sources */,
+				172E27F51E0C206B00BAFD5E /* Person.swift in Sources */,
+				172E27F91E0C20AA00BAFD5E /* Food.swift in Sources */,
 				172E27C71E0C200D00BAFD5E /* ViewController.swift in Sources */,
+				172E27FD1E0C21F900BAFD5E /* Drink.swift in Sources */,
 				172E27C51E0C200D00BAFD5E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

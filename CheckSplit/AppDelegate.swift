@@ -16,6 +16,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let henry = Person(name: "Henry")
+        let andrew = Person(name: "Andrew V")
+        
+        let whiskeyGingerbread = Drink(name: "Whiskey Gingerbread", cost: 7.99)
+        let vodkaClub = Drink(name: "Vodka and Club Soda", cost: 3.00)
+        let bacardiAndCoke = Drink(name: "Bacardi and Coke", cost: 5.99)
+        henry.addDrink(drink: whiskeyGingerbread)
+        andrew.addDrink(drink: bacardiAndCoke)
+        
+        henry.removeDrink(drink: whiskeyGingerbread)
+        henry.addDrink(drink: vodkaClub)
+        
+        print(henry.description)
+        print(andrew.description)
+        
+        
         return true
     }
 
