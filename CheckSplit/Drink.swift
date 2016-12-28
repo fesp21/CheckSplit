@@ -12,20 +12,36 @@ import Foundation
 class Drink : Equatable {
     
     let name: String
-    let cost : Double
+    let originalPrice : Double
+    var cost : Double {
+        get {
+            return splitWith.count == 0 ?  originalPrice : originalPrice / Double(splitWith.count)
+        }
+    }
+    let uuid : Int
+    var splitWith : [Person]
     
     var description : String {
-        return "\(name) - \(cost)"
+        var text = "\(name) - \(cost) (\(uuid)) "
+        for partner in splitWith {
+            text += "\(partner.name) "
+        }
+        return text
     }
     
-    init(name: String, cost: Double) {
+    convenience init(name: String, cost: Double) {
+        self.init(name: name, cost: cost, splitWith: [Person]())
+    }
+    init(name: String, cost: Double, splitWith: [Person]) {
         self.name = name
-        self.cost = cost
+        self.splitWith = splitWith
+        self.originalPrice = cost
+        self.uuid = MealDataStore.sharedInstance.UUID
+        //UUID += 1 //Wanted to see which is faster, observer or the other one
     }
-    
     
 }
 
 func ==(lhs: Drink, rhs: Drink) -> Bool {
-    return lhs.name == rhs.name
+    return lhs.name == rhs.name && lhs.uuid == rhs.uuid
 }

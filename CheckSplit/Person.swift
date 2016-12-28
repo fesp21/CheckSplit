@@ -15,11 +15,14 @@ class Person {
     var appetizers : [Appetizer]
     var entrees : [Food]
     var total : Double
+    var personUUID : Int
+    
+    
     var description : String {
         
         var description = "\(self.name)\nDrink:"
         for drink in self.drinks {
-            description += "\t\(drink.description),"
+            description += "\t\(drink.description)"
         }
         
         description += "\nFood:\n"
@@ -27,11 +30,11 @@ class Person {
             description += "\t\(food.name) - \(food.cost)"
         }
         
-        description += "Total: \(self.total)\n"
+        description += "Total: \(self.totalTally)\n"
         return description
     }
     
-    var totalTotal : Double {
+    var totalTally : Double {
         var total : Double = 0.0
         for drink in drinks {
             total += drink.cost
@@ -53,13 +56,14 @@ class Person {
         self.appetizers = appetizers
         self.entrees = entrees
         self.total = 0.0
+        self.personUUID = MealDataStore.sharedInstance.peopleUUID
     }
     
     convenience init(name: String) {
         self.init(name: name, drinks: [Drink](), appetizers: [Appetizer](), entrees: [Food]())
     }
     
-    //generic method (addItem : [Any]) 
+    //generic method (addItem : [Any])
     func addDrink(drink : Drink) {
         self.drinks.append(drink)
         total += drink.cost
@@ -67,10 +71,18 @@ class Person {
     
     func removeDrink(drink : Drink) {
         guard let index = self.drinks.index(where: { $0 == drink } )
-        else { return }
+            else { return }
         
         total -= self.drinks[index].cost
         self.drinks.remove(at: index)
     }
     
+    func split(drink : Drink, withPerson person : Person) {
+        drink.splitWith.append(person)
+        person.addDrink(drink: drink)
+    }
+    
+}
+func ==(lhs: Person, rhs: Person) -> Bool {
+    return lhs.name == rhs.name //&& lhs.personUUID == rhs.personUUID
 }

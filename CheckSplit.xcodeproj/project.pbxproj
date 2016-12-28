@@ -18,6 +18,7 @@
 		172E27F91E0C20AA00BAFD5E /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172E27F81E0C20AA00BAFD5E /* Food.swift */; };
 		172E27FB1E0C20CE00BAFD5E /* Appetizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172E27FA1E0C20CE00BAFD5E /* Appetizer.swift */; };
 		172E27FD1E0C21F900BAFD5E /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172E27FC1E0C21F900BAFD5E /* Drink.swift */; };
+		176E10471E14143C00BB4F4A /* MealDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176E10461E14143C00BB4F4A /* MealDataStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		172E27F81E0C20AA00BAFD5E /* Food.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		172E27FA1E0C20CE00BAFD5E /* Appetizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Appetizer.swift; sourceTree = "<group>"; };
 		172E27FC1E0C21F900BAFD5E /* Drink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
+		176E10461E14143C00BB4F4A /* MealDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealDataStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,11 +107,12 @@
 		172E27C31E0C200D00BAFD5E /* CheckSplit */ = {
 			isa = PBXGroup;
 			children = (
+				172E27C41E0C200D00BAFD5E /* AppDelegate.swift */,
+				176E10461E14143C00BB4F4A /* MealDataStore.swift */,
 				172E27F81E0C20AA00BAFD5E /* Food.swift */,
 				172E27FA1E0C20CE00BAFD5E /* Appetizer.swift */,
 				172E27FC1E0C21F900BAFD5E /* Drink.swift */,
 				172E27F41E0C206B00BAFD5E /* Person.swift */,
-				172E27C41E0C200D00BAFD5E /* AppDelegate.swift */,
 				172E27C61E0C200D00BAFD5E /* ViewController.swift */,
 				172E27C81E0C200D00BAFD5E /* Main.storyboard */,
 				172E27CB1E0C200D00BAFD5E /* Assets.xcassets */,
@@ -275,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				172E27FB1E0C20CE00BAFD5E /* Appetizer.swift in Sources */,
+				176E10471E14143C00BB4F4A /* MealDataStore.swift in Sources */,
 				172E27F51E0C206B00BAFD5E /* Person.swift in Sources */,
 				172E27F91E0C20AA00BAFD5E /* Food.swift in Sources */,
 				172E27C71E0C200D00BAFD5E /* ViewController.swift in Sources */,
@@ -530,6 +534,7 @@
 				172E27EB1E0C200D00BAFD5E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		172E27EC1E0C200D00BAFD5E /* Build configuration list for PBXNativeTarget "CheckSplitTests" */ = {
 			isa = XCConfigurationList;
@@ -538,6 +543,7 @@
 				172E27EE1E0C200D00BAFD5E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		172E27EF1E0C200D00BAFD5E /* Build configuration list for PBXNativeTarget "CheckSplitUITests" */ = {
 			isa = XCConfigurationList;
@@ -546,6 +552,7 @@
 				172E27F11E0C200D00BAFD5E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

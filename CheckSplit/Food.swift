@@ -46,3 +46,4 @@ class Food : Equatable {
 func ==(lhs: Food, rhs: Food) -> Bool {
     return lhs.name == rhs.name
 }
+
