@@ -47,23 +47,32 @@ class MealDataStore {
     }
     var food : [Food] = []
     
+    func clear() {
+        drinks.removeAll()
+        food.removeAll()
+        items.removeAll()
+        patrons.removeAll()
+        UUID = 0
+        peopleUUID = 0
+    }
+    
     // Waiter or Waitress actions
-    func remove(item : AnyObject) {
+    func removeAll(item : AnyObject) {
         if item is Person {
-            print("This is a person object")
+            print("Remove function for person needed")
         }
         
+        print("remove")
         guard let index = index(of: item) else { return }
         
         if item is Drink {
             let drinkToRemove = drinks[index]
+            drinks.remove(at: index)
             for person in patrons {
                 guard let matchIndex = person.drinks.index(where:{$0 == drinkToRemove}  )
-                    else {
-                        return } // didn't have drink
+                else { continue } // didn't have drink
                 person.drinks.remove(at: matchIndex)
             }
-            drinks.remove(at: index)
         }
         
         
@@ -79,12 +88,16 @@ class MealDataStore {
         //let addFlag : Bool = false
         
         if let person = item as? Person {
-            patrons.append(person)
+            patrons.insert(person, at: 0)
             //addFlag = true
         }
         
         if let drink = item as? Drink {
-            drinks.append(drink)
+            drinks.insert(drink, at: 0)
+        }
+        
+        if let grub = item as? Food {
+            food.insert(grub, at: 0)
         }
         
     }
@@ -107,7 +120,7 @@ class MealDataStore {
             updateItem.splitWith.append(patron)
             //updateAllPeople(withNewItem: updateItem)
             drinks[itemIndex] = updateItem
-            patron.drinks.append(updateItem)
+            patron.drinks.append(updateItem)    //instance of item in Singleton, change also updates singleton
         }
     }
     
@@ -182,12 +195,8 @@ class MealDataStore {
             guard let patronIndex = patron.drinks.index(where: { $0 == updateItem })
                 else { print("Unable to find drink for person, are you sure they ordered it?"); return }
             patron.drinks.remove(at: patronIndex)
-            updateAllPeople(withNewItem: updateItem)
-            
+            //updateAllPeople(withNewItem: updateItem)
         }
         
     }
-    
-    
-    
 }

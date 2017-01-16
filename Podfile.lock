@@ -1,0 +1,15 @@
+PODS:
+  - Fingertips (0.4.0)
+  - MEVHorizontalContacts (1.4)
+
+DEPENDENCIES:
+  - Fingertips (~> 0.4)
+  - MEVHorizontalContacts (~> 1.4)
+
+SPEC CHECKSUMS:
+  Fingertips: '09678a650eecad2c1733dfdd5cb4004600ce2899'
+  MEVHorizontalContacts: e92c4e06c08c38f557f4dc805af2b78b0198248e
+
+PODFILE CHECKSUM: 33838c684ad5f79cd47cce3ae427e511b4cd475b
+
+COCOAPODS: 1.1.1

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Fingertips.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>MEVHorizontalContacts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-CheckSplit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-CheckSplitTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-CheckSplitUITests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>8BA0B980726EC70045141D502E607622</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C5E6F894418240DA195F6416694EAB7D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DA74648589AFA25569F04CF31DF70975</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DBF5C94D79D0E6869408830C3877C888</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EB8479684B19C9CCBC9985CD9E319354</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

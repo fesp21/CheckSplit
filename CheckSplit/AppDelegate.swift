@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import Fingertips
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow?
+    var window: MBFingerTipWindow? = MBFingerTipWindow(frame: UIScreen.main.bounds)
+    //var window: UIWindow?
 
+//    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -141,7 +144,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         store.remove(item: ginTonic0, fromPerson: newHenry)
         store.remove(item: ginTonic0, fromPerson: newHenry)
         store.add(item: ginTonic0, toPerson: newAri)
-        store.remove(item: ginTonic0)
+        
+        store.removeAll(item: ginTonic0)
+        
 
         
         print("\n")
@@ -155,7 +160,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print(drink.description)
         }
         
+        store.drinks.removeAll()
+        store.food.removeAll()
+        for sectionName in menu.keys {
+            
+            let section = menu[sectionName] ?? ["NOT VALID" : 0]
+            
+            
+            for dish in section {
+                if sectionName == "Drinks"
+                {
+                    let drink = Drink(name: dish.key, cost: Double(dish.value))
+                    store.drinks.append(drink)
+                }
+                    
+                else if sectionName == "Appetizers" {
+                    
+                }
+                else if sectionName == "Entrees"
+                {
+                    let food = Food(name: dish.key, cost: Double(dish.value))
+                    store.food.append(food)
+                }
+            }
+        }
         
+        window?.alwaysShowTouches = true
+        
+        DemoRun().setup()
+        
+    
         return true
     }
 

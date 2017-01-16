@@ -28,6 +28,16 @@ class Drink : Equatable {
         }
         return text
     }
+    var splitWithPeople : String {
+        var text = ""
+        for partner in splitWith {
+            text += "\(partner.name) "
+        }
+        return text
+    }
+    convenience init() {
+        self.init(name: "ERROR", cost: 6000.0, splitWith: [Person]())
+    }
     
     convenience init(name: String, cost: Double) {
         self.init(name: name, cost: cost, splitWith: [Person]())
