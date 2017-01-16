@@ -57,10 +57,10 @@
 		11AB387AEFCBF782F98C8DDD5C0BC024 /* MEVHorizontalContacts-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MEVHorizontalContacts-dummy.m"; sourceTree = "<group>"; };
 		15AEE363CA464098358433CF25E5DDC7 /* Pods-CheckSplitUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CheckSplitUITests-resources.sh"; sourceTree = "<group>"; };
 		179AB364A1B9877D19E69A4EA8770E89 /* Pods-CheckSplitUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CheckSplitUITests-umbrella.h"; sourceTree = "<group>"; };
-		1A7238E30F2FB656C3BCE747DAB13266 /* Pods_CheckSplitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CheckSplitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A7238E30F2FB656C3BCE747DAB13266 /* Pods_CheckSplitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CheckSplitTests.framework; path = "Pods-CheckSplitTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22DAFE4304429008C35D29812A33B863 /* Fingertips.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Fingertips.xcconfig; sourceTree = "<group>"; };
 		2A3ED124A98677158CDCFDEA1AF9DBC2 /* MEVHorizontalContactsLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MEVHorizontalContactsLayout.h; path = MEVHorizontalContacts/Classes/MEVHorizontalContactsLayout.h; sourceTree = "<group>"; };
-		2AAB6E650285E2B9E5EE0B91149B18E1 /* Pods_CheckSplitUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CheckSplitUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AAB6E650285E2B9E5EE0B91149B18E1 /* Pods_CheckSplitUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CheckSplitUITests.framework; path = "Pods-CheckSplitUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		342519DCBFB126C34FB7D31920E8E3CC /* Fingertips-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Fingertips-prefix.pch"; sourceTree = "<group>"; };
 		350644658A02B899B43C734D2911F4E4 /* Pods-CheckSplit-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CheckSplit-acknowledgements.plist"; sourceTree = "<group>"; };
 		3995B372F746E058B11CFA701B53E7E3 /* Pods-CheckSplitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CheckSplitTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -79,23 +79,23 @@
 		7EC994CDC2D681BA26389F78A7E4B325 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		81C8221A81C49FC49F5A0EE18284A875 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89D5678B5F0969CC6611B623504D5651 /* MEVHorizontalContactsCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MEVHorizontalContactsCell.m; path = MEVHorizontalContacts/Classes/MEVHorizontalContactsCell.m; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9B1B977BF28965F2CF48160A6BE8731B /* Pods-CheckSplitTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CheckSplitTests.modulemap"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9B1B977BF28965F2CF48160A6BE8731B /* Pods-CheckSplitTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-CheckSplitTests.modulemap"; sourceTree = "<group>"; };
 		9EC195A3C2DC105749B8BEF9B08FA5E1 /* MEVHorizontalContacts-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MEVHorizontalContacts-umbrella.h"; sourceTree = "<group>"; };
 		A0209108AE82EBE23E1B7F01A36CCCAC /* Pods-CheckSplitTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CheckSplitTests-frameworks.sh"; sourceTree = "<group>"; };
-		A5230D31B02BC028096F6FE8FBE49F3E /* MEVHorizontalContacts.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MEVHorizontalContacts.modulemap; sourceTree = "<group>"; };
-		A6C02EE228B85253059422FE33EED915 /* Pods_CheckSplit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CheckSplit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5230D31B02BC028096F6FE8FBE49F3E /* MEVHorizontalContacts.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = MEVHorizontalContacts.modulemap; sourceTree = "<group>"; };
+		A6C02EE228B85253059422FE33EED915 /* Pods_CheckSplit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CheckSplit.framework; path = "Pods-CheckSplit.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9B2E093F0FFA35934B82070A1BE7924 /* Pods-CheckSplitTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CheckSplitTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		AFF87456F042CFCCB6E8531282843568 /* Pods-CheckSplitTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CheckSplitTests-resources.sh"; sourceTree = "<group>"; };
 		B284F3751034081CB0E8559568E79265 /* Pods-CheckSplit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CheckSplit-dummy.m"; sourceTree = "<group>"; };
 		B2F131620DE197E3EAA389D6B0CFBAE6 /* Fingertips-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Fingertips-umbrella.h"; sourceTree = "<group>"; };
 		BA0680D57C043CFAC5F4FC98BE98E88E /* MEVHorizontalContactsCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MEVHorizontalContactsCell.h; path = MEVHorizontalContacts/Classes/MEVHorizontalContactsCell.h; sourceTree = "<group>"; };
-		BCDF4AB2974FF49DF165069F9EDD1610 /* Fingertips.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Fingertips.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCDF4AB2974FF49DF165069F9EDD1610 /* Fingertips.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Fingertips.framework; path = Fingertips.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD0C7816DE8CF232AD7417D0EB3999DB /* Pods-CheckSplitUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CheckSplitUITests-dummy.m"; sourceTree = "<group>"; };
 		C0A309F1D55974134288B70B2E3781B3 /* Pods-CheckSplitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CheckSplitTests.release.xcconfig"; sourceTree = "<group>"; };
-		C1D0E0065D5A3F0915F876185307A254 /* Fingertips.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Fingertips.modulemap; sourceTree = "<group>"; };
+		C1D0E0065D5A3F0915F876185307A254 /* Fingertips.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Fingertips.modulemap; sourceTree = "<group>"; };
 		C2A98E6D8DBCB68E62EE5166B7F98D16 /* Pods-CheckSplit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CheckSplit.release.xcconfig"; sourceTree = "<group>"; };
-		C403D46E7E2D64101B1561BF6F931813 /* Pods-CheckSplit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CheckSplit.modulemap"; sourceTree = "<group>"; };
+		C403D46E7E2D64101B1561BF6F931813 /* Pods-CheckSplit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-CheckSplit.modulemap"; sourceTree = "<group>"; };
 		CA5CE980B37FAEF339AB59C7EA439DD3 /* Pods-CheckSplitUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CheckSplitUITests-frameworks.sh"; sourceTree = "<group>"; };
 		CF02E166EEB8238FCF059A5F7231823D /* Pods-CheckSplitTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CheckSplitTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		D0708E1B99DA88D69F63B667FDF0D7B2 /* Pods-CheckSplitTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CheckSplitTests-dummy.m"; sourceTree = "<group>"; };
@@ -103,12 +103,12 @@
 		D99CAEBF7431A1F39447594179C76265 /* MEVHorizontalContacts.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MEVHorizontalContacts.m; path = MEVHorizontalContacts/Classes/MEVHorizontalContacts.m; sourceTree = "<group>"; };
 		DC8E155CE9B9772D9011F229EFE8A95C /* Pods-CheckSplitUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CheckSplitUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		DD2783D4439FA64F4D917C87BCD99942 /* Pods-CheckSplit-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CheckSplit-frameworks.sh"; sourceTree = "<group>"; };
-		DF3959173E65950FF956E1BD63D331A5 /* MEVHorizontalContacts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MEVHorizontalContacts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF3959173E65950FF956E1BD63D331A5 /* MEVHorizontalContacts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MEVHorizontalContacts.framework; path = MEVHorizontalContacts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFE56BDC7B0DBF4C6ADDAA8155917456 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF69C6BA7A1B837FE61AA219F29ACC48 /* Pods-CheckSplit-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CheckSplit-acknowledgements.markdown"; sourceTree = "<group>"; };
 		F16DD7EAE9396E9EBFD2588C38F98000 /* Pods-CheckSplit-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CheckSplit-resources.sh"; sourceTree = "<group>"; };
 		F509FD260C30054774C8CDCB6381E87E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F62DFF671FE646926A7056CA5338DC95 /* Pods-CheckSplitUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CheckSplitUITests.modulemap"; sourceTree = "<group>"; };
+		F62DFF671FE646926A7056CA5338DC95 /* Pods-CheckSplitUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-CheckSplitUITests.modulemap"; sourceTree = "<group>"; };
 		FC183993E12DBDEE45FA2328F83911A4 /* Fingertips-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Fingertips-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -223,6 +223,7 @@
 				11491A7580EED30EED4086F7CF2D9398 /* MBFingerTipWindow.m */,
 				0F2F81BB437EC0FBF3512150AA485F0F /* Support Files */,
 			);
+			name = Fingertips;
 			path = Fingertips;
 			sourceTree = "<group>";
 		};
@@ -275,6 +276,7 @@
 				5F96FA2F181BC73958C09D96E23A4744 /* MEVHorizontalContactsLayout.m */,
 				0325344BE756372A12782C12931C400D /* Support Files */,
 			);
+			name = MEVHorizontalContacts;
 			path = MEVHorizontalContacts;
 			sourceTree = "<group>";
 		};
@@ -556,7 +558,6 @@
 		12914D756594D15C6F2CA12FE5F89F1B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -810,7 +811,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 22DAFE4304429008C35D29812A33B863 /* Fingertips.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -879,7 +879,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 22DAFE4304429008C35D29812A33B863 /* Fingertips.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -947,7 +946,6 @@
 		E72E7977875C2D251FC62736BBDDC389 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
