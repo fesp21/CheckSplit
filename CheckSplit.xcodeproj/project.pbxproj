@@ -213,6 +213,7 @@
 				172E27BF1E0C200D00BAFD5E /* Resources */,
 				2ED44665EBFC737FECE82402 /* [CP] Embed Pods Frameworks */,
 				CC940B5ECE240083BD71E7EF /* [CP] Copy Pods Resources */,
+				17FB1D661E2DB36300337B5A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -342,6 +343,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		17FB1D661E2DB36300337B5A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 47776ebe6b9b5fc34c72a5417e1a505582162120 0b5bf9f574a5f36b40daa4a9dd3a802d636f38320add9d5ca17e5620f384381f";
+		};
 		2ED44665EBFC737FECE82402 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -653,6 +667,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 9DUF68P9SK;
 				INFOPLIST_FILE = CheckSplit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

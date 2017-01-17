@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Crashlytics
 
 // instead of reloadTable() look into func insertRows(at indexPaths: [IndexPath], with animation: UITableViewRowAnimation)
 
@@ -33,8 +34,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         itemTextView.delegate = self
         
         print("Toggle is currently \(foodPeopleToggle.selectedSegmentIndex)")
+        
+        //Crashlytics force crash button
+        let button = UIButton(type: .roundedRect)
+        button.frame = CGRect(x: 20, y: 50, width: 100, height: 30)
+        button.setTitle("Crash", for: .normal)
+        button.addTarget(self, action: #selector(self.crashButtonTapped(sender:)), for: .touchUpInside)
+        view.addSubview(button)
+
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    @IBAction func crashButtonTapped(sender: AnyObject) {
+        Crashlytics.sharedInstance().crash()
+    }
+
     override func viewWillAppear(_ animated: Bool) {
         if let indexPath = itemTableView.indexPathForSelectedRow {
             itemTableView.deselectRow(at: indexPath, animated: false)

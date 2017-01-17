@@ -8,6 +8,9 @@
 
 import UIKit
 import Fingertips
+import Fabric
+import Crashlytics
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -188,7 +191,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.alwaysShowTouches = true
         
         DemoRun().setup()
-        
+        Fabric.sharedSDK().debug = true
+        Fabric.with([Crashlytics.self])
+
     
         return true
     }

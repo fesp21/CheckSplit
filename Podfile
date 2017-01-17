@@ -8,6 +8,8 @@ target 'CheckSplit' do
   # Pods for CheckSplit
   pod 'Fingertips', '~> 0.4'
   pod 'MEVHorizontalContacts', '~> 1.4'
+  pod 'Fabric'
+  pod 'Crashlytics'
 
 
   target 'CheckSplitTests' do
