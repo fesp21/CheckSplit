@@ -24,6 +24,11 @@
 		172E27E51E0C200D00BAFD5E /* CheckSplitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172E27E41E0C200D00BAFD5E /* CheckSplitUITests.swift */; };
 		1732AFA21E2C3E8100BED7E5 /* ContactsBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1732AFA11E2C3E8100BED7E5 /* ContactsBar.swift */; };
 		1765650E1E2B7969009D93F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 172E27C81E0C200D00BAFD5E /* Main.storyboard */; };
+		179D4FD11E383640007B6FCF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179D4FD01E383640007B6FCF /* Constants.swift */; };
+		17D337911E3D66C3008D57D3 /* ContactTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17D337901E3D66C3008D57D3 /* ContactTableViewCell.xib */; };
+		17D337931E3D66D2008D57D3 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D337921E3D66D2008D57D3 /* ContactTableViewCell.swift */; };
+		17D337961E3D6818008D57D3 /* circle (empty).png in Resources */ = {isa = PBXBuildFile; fileRef = 17D337941E3D6818008D57D3 /* circle (empty).png */; };
+		17D337971E3D6818008D57D3 /* circle (checked).png in Resources */ = {isa = PBXBuildFile; fileRef = 17D337951E3D6818008D57D3 /* circle (checked).png */; };
 		17ECF9AA1E2C407C00306868 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17ECF9A91E2C407C00306868 /* Extensions.swift */; };
 		4357737A8A309D98973168C9 /* Pods_CheckSplitUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0285C869FC4D99EE267E910F /* Pods_CheckSplitUITests.framework */; };
 		840518B59A1A50897BDD7CF4 /* Pods_CheckSplitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 971666F2EC82D9FB19FDD8B5 /* Pods_CheckSplitTests.framework */; };
@@ -69,8 +74,13 @@
 		172E27FC1E0C21F900BAFD5E /* Drink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
 		1732AFA11E2C3E8100BED7E5 /* ContactsBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsBar.swift; sourceTree = "<group>"; };
 		176E10461E14143C00BB4F4A /* MealDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealDataStore.swift; sourceTree = "<group>"; };
+		179D4FD01E383640007B6FCF /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		17A3EAE51E198EB500C7CE36 /* BillListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillListViewController.swift; sourceTree = "<group>"; };
 		17A3EAE71E19946300C7CE36 /* DemoRun.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoRun.swift; sourceTree = "<group>"; };
+		17D337901E3D66C3008D57D3 /* ContactTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactTableViewCell.xib; sourceTree = "<group>"; };
+		17D337921E3D66D2008D57D3 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
+		17D337941E3D6818008D57D3 /* circle (empty).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circle (empty).png"; sourceTree = "<group>"; };
+		17D337951E3D6818008D57D3 /* circle (checked).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circle (checked).png"; sourceTree = "<group>"; };
 		17D4EFBE1E2B169500FC6140 /* TableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableTableViewController.swift; sourceTree = "<group>"; };
 		17ECF9A91E2C407C00306868 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		17FD35F91E1705720044934D /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
@@ -146,11 +156,16 @@
 				172E27F41E0C206B00BAFD5E /* Person.swift */,
 				17A3EAE71E19946300C7CE36 /* DemoRun.swift */,
 				17ECF9A91E2C407C00306868 /* Extensions.swift */,
+				179D4FD01E383640007B6FCF /* Constants.swift */,
 				1732AFA11E2C3E8100BED7E5 /* ContactsBar.swift */,
 				172E27C61E0C200D00BAFD5E /* ViewController.swift */,
 				17A3EAE51E198EB500C7CE36 /* BillListViewController.swift */,
-				172E27C81E0C200D00BAFD5E /* Main.storyboard */,
+				17D337921E3D66D2008D57D3 /* ContactTableViewCell.swift */,
+				17D337901E3D66C3008D57D3 /* ContactTableViewCell.xib */,
 				17D4EFBE1E2B169500FC6140 /* TableTableViewController.swift */,
+				172E27C81E0C200D00BAFD5E /* Main.storyboard */,
+				17D337941E3D6818008D57D3 /* circle (empty).png */,
+				17D337951E3D6818008D57D3 /* circle (checked).png */,
 				172E27CB1E0C200D00BAFD5E /* Assets.xcassets */,
 				172E27CD1E0C200D00BAFD5E /* LaunchScreen.storyboard */,
 				172E27D01E0C200D00BAFD5E /* Info.plist */,
@@ -320,9 +335,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17D337911E3D66C3008D57D3 /* ContactTableViewCell.xib in Resources */,
+				17D337971E3D6818008D57D3 /* circle (checked).png in Resources */,
 				1765650E1E2B7969009D93F2 /* Main.storyboard in Resources */,
 				172E27CF1E0C200D00BAFD5E /* LaunchScreen.storyboard in Resources */,
 				172E27CC1E0C200D00BAFD5E /* Assets.xcassets in Resources */,
+				17D337961E3D6818008D57D3 /* circle (empty).png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,11 +522,13 @@
 				172CDBF71E2B72A000286A1D /* Food.swift in Sources */,
 				172CDBF81E2B72A000286A1D /* Appetizer.swift in Sources */,
 				172CDBF91E2B72A000286A1D /* Drink.swift in Sources */,
+				17D337931E3D66D2008D57D3 /* ContactTableViewCell.swift in Sources */,
 				172CDBFA1E2B72A000286A1D /* Person.swift in Sources */,
 				172CDBFB1E2B72A000286A1D /* DemoRun.swift in Sources */,
 				17ECF9AA1E2C407C00306868 /* Extensions.swift in Sources */,
 				1732AFA21E2C3E8100BED7E5 /* ContactsBar.swift in Sources */,
 				172CDBFC1E2B72A000286A1D /* ViewController.swift in Sources */,
+				179D4FD11E383640007B6FCF /* Constants.swift in Sources */,
 				172CDBFD1E2B72A000286A1D /* BillListViewController.swift in Sources */,
 				172CDBFE1E2B72A000286A1D /* TableTableViewController.swift in Sources */,
 			);

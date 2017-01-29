@@ -49,6 +49,23 @@ class Person {
         }
         return total
     }
+    var subtotal : Double {
+        return self.totalTally
+    }
+    var taxtotal : Double {
+        let taxRate = UserDefaults().getTaxRate()
+        return self.subtotal * taxRate
+    }
+    var grandtotal : Double {
+        return self.subtotal + self.taxtotal
+    }
+    
+    var tiptotal : Double {
+        let grandTotal = self.grandtotal
+        let tipRate = UserDefaults().getTipRate()
+        return grandTotal * tipRate
+    }
+
     
     init(name: String, drinks : [Drink], appetizers: [Appetizer], entrees : [Food]) {
         self.name = name
@@ -81,6 +98,8 @@ class Person {
         drink.splitWith.append(person)
         person.addDrink(drink: drink)
     }
+    
+    
     
 }
 func ==(lhs: Person, rhs: Person) -> Bool {

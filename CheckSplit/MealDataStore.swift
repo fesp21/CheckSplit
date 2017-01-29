@@ -199,4 +199,13 @@ class MealDataStore {
         }
         
     }
+    
+    func calculateSubtotal() -> Double {
+        var subtotal : Double = 0.0
+        for person in patrons {
+            subtotal += person.totalTally
+        }
+        return subtotal
+    }
+    
 }

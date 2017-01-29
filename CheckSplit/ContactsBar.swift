@@ -82,10 +82,10 @@ class ContactsBar: UIView, MEVHorizontalContactsDataSource {
         var labelText: String = ""
         switch item {
         case 0:
-            labelText = "Call"
+            labelText = "My items"    // My items  (new listview with just my items) have ability to remove (deselect it)
             image = UIImage(named: "actionCall")
         case 1:
-            labelText = "Email"
+            labelText = "My bill"   // My bill
             image = UIImage(named: "actionEmail")
         case 2:
             labelText = "Message"

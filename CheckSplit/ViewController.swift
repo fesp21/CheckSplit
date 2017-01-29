@@ -65,7 +65,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let toggleTitle = foodPeopleToggle.titleForSegment(at: foodPeopleToggle.selectedSegmentIndex) ?? ""
         
         priceTextView.isHidden = toggleTitle == "People" ? true : false
-        itemTextView.text = "Enter food name"
+        itemTextView.text = toggleTitle == "Food" ? "Enter food name" : "Enter person's name"
         priceTextView.text = "Price"
         itemTableView.reloadData()
     }
@@ -258,7 +258,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         else { return }
         
         if identifier == "Item" {
-            if itemTextView.text == "Enter food name" { itemTextView.text = "" }
+            if itemTextView.text ==  "Enter food name" || itemTextView.text == "Enter person's name" { itemTextView.text = "" }
             if priceTextView.text == "" { priceTextView.text = "Price" }
         }
         else if identifier == "Price" {

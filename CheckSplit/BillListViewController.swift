@@ -15,10 +15,20 @@ import MEVHorizontalContacts
 
 class BillListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MEVHorizontalContactsDelegate {
 
-    @IBOutlet weak var billTableView: UITableView!
+    var bar : ContactsBar!
 
+    @IBOutlet weak var billTableView: UITableView!
+    
+    @IBOutlet weak var nowEditingLabel: UILabel!
+    
+    var personsTableView : UITableView!
+    let reuseIdentifier = "contactCell"
+    
     let store = MealDataStore.sharedInstance
+    
     var selected = [Drink]()
+    var splitWithPersonIndex : Int?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,14 +37,30 @@ class BillListViewController: UIViewController, UITableViewDelegate, UITableView
         billTableView.allowsMultipleSelectionDuringEditing = true
         billTableView.setEditing(true, animated: true)
         
+        makeBubbles()
+        
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
-        makeBubbles()
+        billTableView.reloadData()
+        bar.horizontalContacts.reloadData()
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    override func viewDidLayoutSubviews() {
+        personsTableView = UITableView(frame: billTableView.frame)
+        
+        personsTableView.delegate = self
+        personsTableView.dataSource = self
+        personsTableView.register(UINib(nibName: "ContactTableViewCell", bundle: nil), forCellReuseIdentifier: reuseIdentifier)
+        personsTableView.allowsMultipleSelection = true
+        
+        view.addSubview(personsTableView)
+        personsTableView.isHidden = true
+        
     }
     
     // MARK: - IBActions
@@ -44,9 +70,27 @@ class BillListViewController: UIViewController, UITableViewDelegate, UITableView
     //MARK: - MEVHorizontalContactsDelegate Methods
     func contactSelected(at index: Int) {
         print("Contact selected at index \(index)")
+        
+        let selectedName = store.patrons[index].name
+        nowEditingLabel.text = "Now editing as \(selectedName)"
+        
+        
+        if let selectedRows = billTableView.indexPathsForSelectedRows { //deselect all
+            for index in selectedRows {
+                billTableView.deselectRow(at: index, animated: false)
+            }
+        }
     }
+    
     func item(_ item: Int, selectedAtContactIndex index: Int) {
         print("selectedAtContactIndex - index : \(index) option : \(item) ")
+        
+        if item == 0 {  // show my items
+            personsTableView.isHidden = false
+            splitWithPersonIndex = index
+            billTableView.isHidden = true
+            personsTableView.reloadData()
+        }
     }
     
     // MARK: - TableView Delegate
@@ -61,11 +105,24 @@ class BillListViewController: UIViewController, UITableViewDelegate, UITableView
         return 20.0
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 50
+        return 24
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 64
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0  { return store.drinks.count }
-        else  { return store.food.count   } //section == 1
+        
+        if splitWithPersonIndex == nil {
+            if section == 0  { return store.drinks.count }
+            else  { return store.food.count   } //section == 1
+        }
+        else {
+            //show personal items
+            if section == 0 { return store.patrons[splitWithPersonIndex!].drinks.count }
+            else { return store.patrons[splitWithPersonIndex!].entrees.count  }
+        }
+        
+        
     }
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let footer = UIView()
@@ -75,25 +132,49 @@ class BillListViewController: UIViewController, UITableViewDelegate, UITableView
    
     // MARK: - TableView DataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "itemCell") ?? UITableViewCell()
         let section = indexPath.section
-    
-        if section == 0 {
-            let drink = store.drinks[indexPath.row]
-            let splitWithCount = drink.splitWith.count
-            cell.textLabel?.text = "\(drink.name) - \(drink.cost)"
-            cell.detailTextLabel?.text = splitWithCount > 1 ? "(\(drink.splitWith.count))ppl" : ""
+
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "itemCell") {
             
-            
-        }
-        else if section == 1 {
-            let food = store.food[indexPath.row]
-            
-            cell.textLabel?.text = "\(food.name)"
-            cell.detailTextLabel?.text = ""
+            if section == 0 {
+                let drink = store.drinks[indexPath.row]
+                let splitWithCount = drink.splitWith.count
+                cell.textLabel?.text = "\(drink.name) - \(drink.cost)"
+                cell.detailTextLabel?.text = splitWithCount > 1 ? "(\(drink.splitWith.count))ppl" : ""
+                
+                
+            }
+            else if section == 1 {
+                let food = store.food[indexPath.row]
+                
+                cell.textLabel?.text = "\(food.name)"
+                cell.detailTextLabel?.text = ""
+            }
+            return cell    //henry refactor: one return statement kthx
         }
         
-        return cell
+        
+        if let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier) as? ContactTableViewCell,
+            let personIndex = splitWithPersonIndex {
+            
+            let person = store.patrons[personIndex]
+            if section == 0 {
+                let drink = person.drinks[indexPath.row]
+                cell.nameLabel.text = "\(drink.name)"
+                cell.splitWithLabel.text = drink.splitWithPeople
+            }
+            else if section == 1 {
+                let food = person.entrees[indexPath.row]
+                
+                cell.nameLabel?.text = "\(food.name)"
+                //cell.splitWithLabel?.text =
+            }
+            
+            //cell.setSelected(true, animated: false)
+            return cell
+        }
+        
+        return UITableViewCell()
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let section = indexPath.section
@@ -117,14 +198,7 @@ class BillListViewController: UIViewController, UITableViewDelegate, UITableView
             billTableView.selectRow(at: indexPath, animated: false, scrollPosition: .none)
         }
         
-        //    highlight background
-//        let selectedCell = billTableView.cellForRow(at: indexPath)
-//        selectedCell?.contentView.backgroundColor = UIColor.red
-        //selectedCell?.accessoryView?.backgroundColor = UIColor.red
-        //selectedCell?.multipleSelectionBackgroundView?.backgroundColor = UIColor.red
-//        selectedCell?.textLabel?.textColor = UIColor.white
-//        selectedCell?.detailTextLabel?.textColor = UIColor.white
-        
+    
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
@@ -145,12 +219,12 @@ class BillListViewController: UIViewController, UITableViewDelegate, UITableView
     
     //MARK: - helper methods 
     func makeBubbles() {
-        let bar = ContactsBar(frame: .zero)
+        let screenWidth = self.view.bounds.size.width
+        bar = ContactsBar(frame: .zero )
         bar.horizontalContacts.delegate = self
-        let containerView = UIView(frame: CGRect(x: 0, y: 40, width: self.view.bounds.size.height, height: 100))
-        containerView.addSubview(bar)
+        let containerView = UIView(frame: CGRect(x: 0, y: 40, width: screenWidth, height: 100))
+        containerView.addSubview(bar!)
         view.addSubview(containerView)
-        
         self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[horizontalContacts]|", options: .alignAllCenterX, metrics: nil, views: ["horizontalContacts": bar]))
         self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[horizontalContacts]|", options: .alignAllCenterY, metrics: nil, views: ["horizontalContacts": bar]))
         
